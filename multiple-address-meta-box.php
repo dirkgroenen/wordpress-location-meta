@@ -10,8 +10,6 @@
 
         public function __construct(){
             
-            include(plugins_url( '/options/options.php' , __FILE__ ));
-            
             add_action( 'add_meta_boxes', array($this, 'add_address_meta_box') );
             add_action( 'save_post', array($this, 'prfx_meta_save') );
             add_action( 'admin_enqueue_scripts', array($this, 'add_headfiles') );
